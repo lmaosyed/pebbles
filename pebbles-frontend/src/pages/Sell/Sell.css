@@ -1,0 +1,397 @@
+/* src/pages/Sell/Sell.css */
+
+:root {
+  --primary: #6932D0;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --bg: #f3f4f8;
+  --radius: 12px;
+}
+
+/* Page */
+.sell-page-fluid {
+  min-height: 100vh;
+  padding: 40px 48px;
+  background: var(--bg);
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Centered card container */
+.post-card {
+  max-width: 1250px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+
+
+/* header */
+.post-card-header {
+  padding: 8px 6px 18px 6px;
+  border-bottom: 1px solid #f3f3f6;
+}
+.post-card-header h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Grid: left (images + desc) and right (meta) */
+.post-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 380px;
+  gap: 28px;
+  margin-top: 18px;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* upload row with three slots */
+.upload-row {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* single upload slot */
+.upload-slot {
+  flex: 1;
+  min-height: 160px;
+  border-radius: 18px;
+  background: #efeff3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px dashed #c9c9d2;
+  transition: 0.2s;
+}
+
+.upload-slot:hover {
+  border-color: var(--primary);
+}
+
+/* empty click area */
+.slot-empty {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:8px;
+  cursor: pointer;
+  text-align:center;
+  padding: 12px;
+}
+
+.upload-icon {
+  font-size: 28px;
+  color: rgba(11,11,16,0.45);
+}
+
+.slot-text {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* preview snapshot */
+.slot-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slot-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* remove button on preview */
+.slot-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Title + price row */
+.title-price-row {
+  display: flex;
+  gap: 12px;
+}
+
+.title-price-row .field {
+  flex: 1;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.title-price-row .field input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6ea;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Description */
+.desc-area label { font-weight:700; margin-bottom:6px; display:block; color:#111827; }
+.desc-area textarea {
+  width: 100%;
+  min-height: 180px;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #e6e6ea;
+  resize: vertical;
+  font-size: 15px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  display:flex;
+  flex-direction:column;
+  gap: 16px;
+  padding-left: 8px;
+}
+
+.meta-row {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.meta-row label {
+  font-weight:700;
+  color:#111827;
+}
+
+.meta-row select,
+.meta-row input {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #d9d9e2;
+  font-size: 15px;
+  background: #f7f7f9;
+  transition: .2s;
+}
+
+.meta-row select:focus,
+.meta-row input:focus {
+  background: #fff;
+  border-color: var(--primary);
+}
+
+/* action block places button at bottom */
+.action-block {
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+/* Post button */
+.post-btn {
+  background: #8A4FFF;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 18px rgba(138,79,255,0.28);
+  transition: .2s;
+}
+
+.post-btn:hover {
+  background: #7B35FF;
+}
+
+.post-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Toast */
+.toast-popup {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  z-index: 999999;
+  color: white;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.25);
+  animation: toastFade 2.2s ease-out forwards;
+}
+.toast-popup.success { background: #20a64a; }
+.toast-popup.error { background: #ff3b3b; }
+
+@keyframes toastFade {
+  0% { opacity: 0; transform: translateY(-8px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .right-panel { order: 2; }
+  .left-panel { order: 1; }
+  .upload-row { gap: 8px; }
+}
+
+/* More images section */
+.extra-images-wrap {
+  margin-top: 16px;
+}
+
+.extra-upload-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #f0f0ff;
+  border: 1px dashed #c7c7df;
+  color: #5f46d8;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.extra-preview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.extra-thumb {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.extra-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.extra-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+/* Popup background */
+.warn-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+/* Popup box – bigger now */
+.warn-box {
+  width: 640px;            /* ⬅ bigger width */
+  background: #ffc928;     /* closer to figma yellow */
+  padding: 40px;           /* ⬅ bigger padding */
+  border-radius: 18px;     /* softer corner */
+  text-align: center;
+  box-shadow: 0 12px 55px rgba(0,0,0,0.25);
+  animation: popupScale .15s ease-out;
+}
+
+/* Title */
+.warn-title {
+  font-size: 28px;        /* ⬅ bigger title */
+  font-weight: 900;
+  color: #000;
+  font-size:"Poppins" sans-serif;
+  margin-bottom: 18px;
+}
+
+/* Main bold line */
+.warn-text {
+  font-size: 18px;        /* ⬅ bigger */
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #000;
+}
+
+/* Sub text */
+.warn-subtext {
+  font-size: 16px;        /* ⬅ bigger */
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.45;
+}
+
+/* Button */
+.warn-btn {
+  background: #7B2FFF;
+  color: white;
+  border: none;
+  width: 80%;             /* ⬅ wider button */
+  padding: 16px;          /* ⬅ bigger button */
+  margin-top: 22px;
+  font-size: 18px;        /* ⬅ bigger text */
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.warn-btn:hover {
+  opacity: .92;
+}
+
+/* animation */
+@keyframes popupScale {
+  0% { transform: scale(0.90); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

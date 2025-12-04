@@ -1,0 +1,18 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pebbles theme colors */
+:root {
+  --peb-primary: #6D2BD9;
+  --peb-surface: #111827;
+  --peb-bg: #F0F2F4;
+  --peb-text: #1F1F1F;
+}
+
+/* Global styles */
+body {
+  @apply bg-peb-bg text-peb-text font-sans;
+}

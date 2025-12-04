@@ -1,0 +1,128 @@
+/* MAIN WRAPPER */
+.auth-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEFT SIDE */
+.auth-left {
+  width: 70%;
+  background: url("/src/assets/auth-bg.jpg") center/cover no-repeat;
+  position: relative;
+}
+
+/* Purple overlay */
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(107, 44, 255, 0.50);
+  backdrop-filter: blur(1.5px);
+}
+
+/* LEFT CONTENT */
+.auth-content {
+  position: relative;
+  z-index: 5;
+  padding: 100px 70px;
+  color: white;
+  max-width: 500px;
+}
+
+.auth-title {
+  font-size: 68px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.auth-subtitle {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+/* Bullet Points */
+.auth-points {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.tick {
+  color: white;
+  font-size: 24px;
+  margin-right: 14px;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+/* RIGHT SIDE */
+.auth-right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+
+  background: url("/src/assets/auth-pattern.png") repeat;
+  background-size: 340px;    /* adjust pattern scaling */
+  opacity: 0.95;
+}
+
+/* CARD */
+.auth-card {
+  width: 450px;
+  padding: 48px 38px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  position:realtive;
+  z-index:5;
+}
+
+/* Inputs + Button styling (keep your original) */
+.auth-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background: #7B2FFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top:4px;
+}
+
+.auth-btn:hover {
+  background: #6a28e6;
+}
+
+.auth-bottom-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 14px;
+}
+
+.auth-bottom-text a {
+  color: #7B2FFF;
+  font-weight: 600;
+}

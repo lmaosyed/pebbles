@@ -1,0 +1,165 @@
+:root {
+  --primary: #f4f4f4ff;
+  --dark: #6932D0;
+  --white: #fff;
+}
+
+/* CONTAINER */
+.topnav-wrapper {
+  width: 100%;
+  height: 72px;
+  background: var(--dark);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+}
+
+.topnav-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+}
+
+/* LEFT LOGO */
+.topnav-logo {
+  font-size: 40px;
+  font-weight: 700;
+  line-height:34px;
+  flex: 0 0 auto;
+  color: white;
+  cursor: pointer;
+}
+
+/* CENTER MENU */
+.topnav-menu {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  justify-content:center;
+  flex:1;
+  padding-left:200px;
+}
+
+.tn-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.15s;
+  position: relative;
+}
+
+.tn-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.tn-item.active svg {
+  color: var(--primary);
+}
+
+/* SELL BUTTON */
+.tn-sell {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: #6932D0;
+  color: white;
+  font-size: 28px;
+  border: white;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.tn-sell:hover {
+  transform: translateY(-2px);
+    background: rgba(255,255,255,0.08);
+
+}
+
+/* BADGE */
+.tn-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #14C06C;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* RIGHT SIDE */
+.topnav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 0 0 auto;
+}
+
+.settings-icon svg {
+  stroke: white;
+}
+
+.tn-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.08);
+}
+
+.tn-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* === Search Bar (right side) === */
+.topnav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topnav-searchbar {
+  background: #ffffff;
+  border-radius: 40px;
+  height: 34px;
+  width: 240px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.topnav-searchbar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  background: transparent;
+}
+
+.search-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon-btn svg {
+  color: #7a7a7a;
+}

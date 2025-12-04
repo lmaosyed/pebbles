@@ -1,0 +1,146 @@
+/* src/components/layout/Sidebar.css */
+:root{
+  --sb-width:72px;
+  --sb-bg:#1f1f1f; /* dark */
+  --sb-accent:#2b2b2b;
+  --primary:#7B2FFF;
+  --badge-bg:#14C06C;
+  --white: #fff;
+}
+
+/* Sidebar container */
+.peb-sidebar{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  height:100vh;
+  width:72px;
+  background: linear-gradient(180deg, var(--sb-bg), #151515);
+  z-index:5000;
+  display:flex;
+  align-items:stretch;
+  padding:8px 8px;
+  border-right: 1px solid rgba(255,255,255,0.03);
+}
+
+/* inner to control layout */
+.sb-inner{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* small top spacer */
+.sb-top{ height:8px; width:100%; }
+
+/* nav item shared style */
+.sb-item{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:6px 0;
+  color:var(--white);
+  text-decoration:none;
+  background: transparent;
+  border:none;
+  cursor:pointer;
+  position:relative;
+  transition: all .14s ease;
+}
+
+/* hover and active */
+.sb-item:hover{ background: rgba(255,255,255,0.03); transform: translateX(2px); }
+.sb-item.active, .sb-item.active svg{ color: var(--primary); }
+
+/* Icon wrappers for badges */
+.icon-wrap{ position:relative; display:flex; align-items:center; justify-content:center; }
+
+/* green notification bubble */
+.sb-badge{
+  position:absolute;
+  right:-6px;
+  top: -6px;
+  min-width:22px;
+  height:22px;
+  border-radius:12px;
+  padding:0 6px;
+  background:var(--badge-bg);
+  color:#fff;
+  font-size:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid #0f0f0f;
+}
+
+/* the Sell button: bigger & purple */
+.sb-sell{
+  width:56px;
+  height:56px;
+  background:var(--primary);
+  box-shadow: 0 6px 18px rgba(123,47,255,0.18);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:12px 0;
+  color:white;
+  font-weight:700;
+  font-size:28px;
+  line-height:1;
+}
+
+/* pushers */
+.sb-spacer{ flex:1; width:100%; }
+
+/* avatar at bottom */
+.sb-avatar{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  overflow:hidden;
+  margin-bottom:40px;
+  border:2px solid rgba(255,255,255,0.04);
+}
+.sb-avatar img{ width:100%; height:100%; object-fit:cover; }
+
+/* small focus style */
+.sb-item:focus{ outline: none; box-shadow: 0 0 0 3px rgba(123,47,255,0.08); }
+.sidebar-menu .icon-home {
+  margin-bottom: 20px;   /* spacing under home icon */
+}
+.sidebar-menu a:nth-child(1) {
+  margin-bottom: 20px;   /* space between home and search */
+}
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+/* --- NEW SPACING FIXES --- */
+
+/* Uniform spacing between ALL items */
+.sb-item {
+  margin: 10px 0;
+}
+
+/* Slight extra gap between Home + Search so they don't look stuck */
+.sb-item:nth-of-type(2) {
+  margin-top: 18px !important;
+}
+
+/* Ensure icon size consistency */
+.sb-item svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Make Search icon same hover style */
+.menu-item {
+  composes: sb-item;
+}
