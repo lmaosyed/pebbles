@@ -26,7 +26,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",                 // local Vite dev
   "http://localhost:3000",                 // other local ports (optional)
-  "https://pebbles-3zmi.vercel.app",       // <-- YOUR VERCEL ORIGIN
+  "https://pebbles-ys4e.onrender.com",       // <-- YOUR VERCEL ORIGIN
   process.env.FRONTEND_URL                  // keep if you set it on Render env
 ];
 
@@ -237,3 +237,4 @@ mongoose.connect(process.env.MONGO_URI)
         });
     })
     .catch(err => console.log(err));
+
