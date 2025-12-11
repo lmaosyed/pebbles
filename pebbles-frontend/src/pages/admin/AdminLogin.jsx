@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import api from "../../utils/axiosInstance";
 import ADMIN from "../../api/adminEndpoints";
-import "./adminLogin.css";
+import "./AdminLogin.css";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -46,3 +46,4 @@ export default function AdminLogin() {
     </div>
   );
 }
+
