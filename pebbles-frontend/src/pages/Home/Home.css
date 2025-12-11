@@ -1,0 +1,187 @@
+/* ----------------------------------------------------------
+   FIXED WIDTH HOME PAGE (STATIC — LIKE FIGMA)
+-----------------------------------------------------------*/
+
+/* Whole page uses fixed width container */
+.home-page {
+  width: 100%;              /* FIXED WIDTH */
+  background: transparent;        /* White base */
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  padding: 0;
+  overflow-y: hidden !important;
+}
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+/* ----------------------------------------------------------
+   TOP PURPLE SECTION — EXACTLY 60% OF PAGE HEIGHT
+-----------------------------------------------------------*/
+
+.home-hero {
+  width: 100%;
+  height: 45vh;            
+  background: #6932D0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* ----------------------------------------------------------
+   HOME HEADER (TEXT INSIDE PURPLE)
+-----------------------------------------------------------*/
+
+.home-content {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.home-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.05;   /* tighter, like your screenshot */
+  letter-spacing: -1.5px;  /* compressed look */
+  color: #ffffff;
+  margin-top: 70px;
+transform: scaleY(0.96);
+
+  /* Smooth rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------------------------------------
+   SEARCH BAR (STATIC WIDTH)
+-----------------------------------------------------------*/
+
+.search-section {
+  width: 100%;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.search-bar-container {
+  width: 880px;        /* FIXED WIDTH MATCHING FIGMA */
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 360px;        /* FIXED WIDTH */
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.search-btn {
+  width: 90px;         /* FIXED BUTTON SIZE */
+  background: #430b6fff;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------------
+   WHITE SECTION (BOTTOM 40%)
+-----------------------------------------------------------*/
+.inside-container {
+  width: 100%;       /* match layout width */
+  margin: 0 auto;      /* center it */
+  display: block;
+}
+
+.home-white-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 60px 80px;
+  margin-top: -40px;       /* Pull it upward slightly */
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  z-index: 5;
+}
+
+/* ----------------------------------------------------------
+   NEWEST LISTINGS TITLE
+-----------------------------------------------------------*/
+
+.newest-title {
+  margin-top:-10px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* ----------------------------------------------------------
+   LISTINGS ROW — STATIC, NO SCROLL
+-----------------------------------------------------------*/
+
+.scroll-row {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  width: 100%;
+  overflow: hidden;   /* REMOVE SCROLL */
+}
+
+/* Listing card */
+
+.listing-card {
+  width: 220px;        
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.listing-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.listing-card h3 {
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.listing-card p {
+  font-size: 14px;
+  margin-top: 3px;
+  color: #444;
+}
+
+/* ----------------------------------------------------------
+   EXPLORE BUTTON
+-----------------------------------------------------------*/
+
+.explore-btn-large {
+  margin-top: 28px;
+  background: #6932D0;
+  padding: 12px 26px;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

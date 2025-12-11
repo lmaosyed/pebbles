@@ -1,0 +1,136 @@
+.profile-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------------- HORIZONTAL TOP SECTION ---------------- */
+
+.profile-header-horizontal {
+  display: flex;
+  margin-top:25px;
+  align-items: center;
+  gap: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+/* Larger profile picture */
+.profile-avatar-large {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #9b4dff;
+}
+
+/* RIGHT SIDE USER INFO */
+.profile-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-info-right h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.profile-email,
+.profile-phone {
+  color: #555;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Large logout button */
+.logout-btn-large {
+  margin-top: 18px;
+  padding: 14px 26px;
+  background: #ff4b4b;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 165px;
+  transition: 0.2s;
+}
+
+.logout-btn-large:hover {
+  background: #e13838;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.edit-profile-btn {
+  padding: 14px 26px;
+  background: #6932D0;   /* Pebbles purple */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.edit-profile-btn:hover {
+  background: #6920e0;
+  transform: translateY(-1px);
+}
+
+/* ---------------- LISTINGS SECTION (unchanged) ---------------- */
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.listing-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.listing-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  padding-bottom: 12px;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+}
+
+.listing-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.listing-details {
+  padding: 10px 14px;
+}
+
+.listing-details h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}

@@ -1,0 +1,45 @@
+.admin-login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f0ff;
+}
+
+.admin-login-card {
+  width: 360px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-login-card h2 {
+  text-align: center;
+  color: #6932D0;
+}
+
+.admin-login-card input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.admin-error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.admin-login-card button {
+  padding: 12px;
+  background: #6932D0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}

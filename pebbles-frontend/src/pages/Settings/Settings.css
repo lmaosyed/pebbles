@@ -1,0 +1,140 @@
+/* SETTINGS PAGE LAYOUT (fixed for sidebar) */
+.settings-page {
+  padding: 30px 50px;
+  margin-left: 20px; /* <-- IMPORTANT: account for sidebar */
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  min-height: 100vh;
+  background: #f9f9ff;
+  position:relative;
+  overflow-y:auto;
+  height:100vh;
+}
+
+/* Title */
+.settings-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family:"Poppins" sans-serif;
+}
+
+/* Cards */
+.settings-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px 35px;
+  margin-bottom: 35px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+.settings-card h2 {
+  font-size: 22px;
+  margin-bottom: 22px;
+  color: #6b2cff;
+  font-weight: 700;
+}
+
+/* Profile section */
+.settings-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Avatar (unused but keep sizing consistent) */
+.settings-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #6b2cff;
+  object-fit: cover;
+}
+
+/* Fields */
+.settings-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-field label {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.settings-field input {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Main Buttons */
+.settings-btn-primary {
+  background: #6b2cff;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.settings-btn-primary:hover {
+  background: #5a21e0;
+}
+
+/* Danger Zone */
+.danger-zone h2 {
+  color: #d12;
+}
+
+.logout-btn {
+  display: block;
+  width: fit-content;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #dc1515ff;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #e4e4e4;
+}
+
+.toast-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 9999;
+  animation: fadeInOut 2s ease forwards;
+  color: white;
+}
+
+.toast-popup.success {
+  background: #4CAF50; /* green */
+}
+
+.toast-popup.error {
+  background: #ff3b30; /* red */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}

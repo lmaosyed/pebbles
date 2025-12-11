@@ -1,0 +1,45 @@
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+.admin-table th, 
+.admin-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #6932D0;
+  color: white;
+  font-weight: 600;
+}
+
+.admin-table tr:hover {
+  background: #f7f1ff;
+}
+
+.btn-red {
+  padding: 6px 12px;
+  background: #ffdad7;
+  border: none;
+  color: #b30000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-green {
+  padding: 6px 12px;
+  background: #d7ffe4;
+  border: none;
+  color: #067a23;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
